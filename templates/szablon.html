@@ -11,7 +11,7 @@
     <style>
       body {
         font-family: "Open Sans", sans-serif;
-        margin: 3% 10%;
+        margin: 3% 25%;
         line-height: 1.8;
         background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
         color: #2d3748;
@@ -57,7 +57,7 @@
         text-align: justify;
       }
 
-      article section:first-of-type p:first-of-type::first-letter {
+      body > p:first-of-type::first-letter {
         font-size: 3.5em;
         font-weight: bold;
         float: left;
@@ -84,6 +84,7 @@
         border-radius: 12px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         transition: transform 0.4s ease;
+        min-height: 300px;
       }
 
       img:hover {
@@ -160,7 +161,6 @@
         background: #2b6cb0;
       }
 
-      /* Tabela */
       table {
         width: 100%;
         border-collapse: collapse;
@@ -237,6 +237,75 @@
         }
       }
     </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll("h1, h2, h3, figure, p");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        elements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        const toTopButton = document.createElement("button");
+        toTopButton.textContent = "▲";
+        toTopButton.id = "toTopButton";
+        document.body.appendChild(toTopButton);
+
+        toTopButton.style.position = "fixed";
+        toTopButton.style.bottom = "30px";
+        toTopButton.style.right = "30px";
+        toTopButton.style.padding = "15px";
+        toTopButton.style.border = "none";
+        toTopButton.style.borderRadius = "50%";
+        toTopButton.style.background = "#3182ce";
+        toTopButton.style.color = "#fff";
+        toTopButton.style.fontSize = "20px";
+        toTopButton.style.cursor = "pointer";
+        toTopButton.style.display = "none";
+        toTopButton.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+        toTopButton.style.zIndex = "1000";
+
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            toTopButton.style.display = "block";
+          } else {
+            toTopButton.style.display = "none";
+          }
+        });
+
+        toTopButton.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+        const tooltips = document.querySelectorAll(".tooltip");
+        tooltips.forEach((tooltip) => {
+          tooltip.addEventListener("mouseover", () => {
+            const tooltipText = tooltip.querySelector(".tooltiptext");
+            tooltipText.style.visibility = "visible";
+            tooltipText.style.opacity = "1";
+          });
+          tooltip.addEventListener("mouseout", () => {
+            const tooltipText = tooltip.querySelector(".tooltiptext");
+            tooltipText.style.visibility = "hidden";
+            tooltipText.style.opacity = "0";
+          });
+        });
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {

@@ -8,32 +8,46 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 def generate_html(article_content): 
     print("Generuje HTML proszę czekać...")
     messages = [
-        {"role": "user", "content": (
-            "Przetwórz poniższy artykuł do formatu HTML, używając odpowiednich tagów HTML do "
-            "strukturyzacji treści. Proszę o zachowanie oryginalnego znaczenia i struktury artykułu bez dodawania własnych treści."
-            "Masz wysłać kod html, który będzie w <body></body>"
-            "\n\nProszę o zastosowanie następującego formatowania:"
-            "\n- **Pogrubiaj** kluczowe terminy lub frazy istotne dla treści, używając tagu <strong>."
-            "\n- Dodawaj **cytaty** lub wyróżnione fragmenty, jeśli występują w tekście, za pomocą tagu <blockquote>."
-            "\n- W miejscach, gdzie warto umieścić grafiki związane z treścią, umieść je w środku tekstu pomiędzy paragrafami <p>, aby lepiej rozmieścić treść."
-            "\n- **W sumie w artykule powinny znaleźć się cztery grafiki**, w tym pierwsza grafika na początku artykułu jako grafika wstępna, ma to być na samym początku i to ma byc tylko jedna grafika, nic nie ma być przed wstępną grafiką."
-            "\n- **Upewnij się, że w każdej sekcji znajduje się tylko jedna grafika, i unikaj umieszczania dwóch grafik pod rząd lub dwóch grafik w jednej sekcji.**"
-            "\n- Użyj tagu <img> z atrybutem src='image_placeholder.jpg' i w atrybucie alt umieść tekst zaczynający się od 'wygeneruj grafikę, która przedstawia...' i dalej dokładnie opisz, co ma być na obrazku, w dwóch zdaniach."
-            "\n- **Umieść podpisy pod grafikami używając odpowiedniego tagu HTML**, na przykład tagu <figcaption> wewnątrz tagu <figure>, który obejmuje zarówno obrazek, jak i podpis."
-            "\n- Dodaj dodatkowe tagi HTML, aby tekst był bardziej dynamiczny, np. użyj <em> do podkreślenia, <span> i inne."
-            "\n- Używaj odpowiednich tagów nagłówków (<h1>, <h2>, <h3>) do strukturyzacji sekcji artykułu."
-            "\n- Jeśli w artykule występują listy, sformatuj je używając tagów <ul> lub <ol> oraz <li>."
-            "\n- Upewnij się, że kod HTML jest poprawny i wolny od błędów składniowych. Prawidłowo koduj znaki specjalne."
-            "\n- Nie używaj znaczników <body> i </body>. Prześlij tylko zawartość wewnątrz tych znaczników."
-            "\n- Nie dodawaj żadnych dodatkowych treści ani komentarzy, które nie są zawarte w oryginalnym artykule."
-            f"\n\nArtykuł:\n{article_content}"
-        )}
-    ]
+    {"role": "user", "content": (
+        "Przetwórz poniższy artykuł do formatu HTML, używając odpowiednich tagów do strukturyzacji treści. "
+        "Zachowaj oryginalne znaczenie i strukturę artykułu bez dodawania własnych treści. "
+        "Prześlij tylko kod HTML zawartości między znacznikami <body> i </body>, ale nie dołączaj samych znaczników <body> i </body>."
+        "\n\nProszę o zastosowanie następującego formatowania:"
+        "\n\n**Grafiki:**"
+        "\n- Umieść **dokładnie cztery grafiki** w artykule."
+        "\n- **Pierwszą grafikę** umieść **po głównym nagłówku** (tytuł artykułu)."
+        "\n- **Pozostałe trzy grafiki** umieść w odpowiednich miejscach **wewnątrz treści**, nie bezpośrednio po nagłówkach."
+        "\n- Upewnij się, że grafiki są osadzone w środku akapitów lub między nimi, aby naturalnie wpasowywały się w treść."
+        "\n- Unikaj umieszczania dwóch grafik pod rząd."
+        "\n- Każdą grafikę umieść wewnątrz tagu <figure>."
+        "\n- Użyj tagu <img> z atrybutem src='image_placeholder.jpg'."
+        "\n- **Dodaj atrybut alt do każdego obrazka z dokładnym promptem, który możemy użyć do wygenerowania grafiki.** Opis powinien:"
+        "\n  - Zaczynać się od 'wygeneruj grafikę w stylu realistycznym...'."
+        "\n  Być prosty, nie rób grafik gdzie jest zbyt dużo rzeczy na nich."
+        "\n  - Zawierać **3-4 realistyczne zdania** opisujące obraz."
+        "\n  - Być **szczegółowy i precyzyjny**, aby ułatwić wygenerowanie grafiki przez AI."
+        "\n  - Być związany z treścią artykułu i kontekstem miejsca, w którym jest umieszczony."
+        "\n- **Umieść podpisy pod grafikami**, tworząc je na podstawie treści artykułu. Użyj tagu <figcaption> wewnątrz tagu <figure>, umieszczając go poniżej tagu <img>."
+        "\n\n**Formatowanie treści:**"
+        "\n- Używaj odpowiednich nagłówków (<h1>, <h2>, <h3>) do strukturyzacji artykułu."
+        "\n- **Nie umieszczaj grafik bezpośrednio po nagłówkach.** Zawsze wstaw co najmniej jeden akapit tekstu po nagłówku, zanim umieścisz grafikę."
+        "\n Stosuj kursywy <em> i pogrubienia <strong> dość często, do całego tekstu, możesz korzystać z innych tagów html do urozmaicenia tekstu."
+        "\n- Jeśli w artykule są listy, sformatuj je za pomocą tagów <ul>/<ol> oraz <li>."
+        "\n- Jeśli w tekście występują cytaty lub wyróżnione fragmenty, sformatuj je za pomocą tagu <blockquote>."
+        "\n- Możesz używać dowolnych znaczników HTML, aby tekst był bardziej dynamiczny."
+        "\n\n**Ważne uwagi:**"
+        "\n- **Nie dołączaj żadnych stylów CSS ani JavaScriptu.** Używaj wyłącznie czystego HTML."
+        "\n- Upewnij się, że kod HTML jest poprawny i wolny od błędów składniowych."
+        "\n- Nie dodawaj żadnych treści ani komentarzy spoza oryginalnego artykułu."
+        "\n- Nie używaj znaczników <html>, <head>, <body> ani </body>. Prześlij tylko zawartość, która byłaby między znacznikami <body> i </body>."
+        f"\n\nArtykuł:\n{article_content}"
+    )}
+]
 
     response = openai.chat.completions.create(
         model="gpt-4",
         messages=messages,
-        max_tokens=3000,
+        max_tokens=4096,
         temperature=0.5,
     )
     return response.choices[0].message.content.strip()
