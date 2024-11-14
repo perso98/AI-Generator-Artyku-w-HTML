@@ -113,3 +113,13 @@ Po uruchomieniu aplikacji:
 ## Inny przykład:
 ![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-13_05_25](https://github.com/user-attachments/assets/40539ab2-c8d8-4eb4-9760-c5b60d5234f0)
 
+
+## Możliwe kierunki dalszego rozwoju
+
+1. **Dodanie interfejsu użytkownika** – Rozbudowanie aplikacji o prosty interfejs graficzny (GUI) pozwoliłoby użytkownikom łatwiej przesyłać artykuły do przetworzenia oraz przeglądać wyniki w czasie rzeczywistym.
+
+2. **Obsługa wielu języków** – Integracja wsparcia dla różnych języków mogłaby uczynić aplikację bardziej uniwersalną, umożliwiając generowanie HTML z artykułów w wielu językach.
+
+3. **Zaawansowana edycja promptów** – Umożliwienie użytkownikom dostosowania promptów przed przesłaniem artykułu do API OpenAI mogłoby zwiększyć elastyczność aplikacji i dostosować wynik do specyficznych potrzeb.
+
+4. **Integracja z systemami CMS** – Dodanie opcji eksportu wygenerowanego kodu HTML bezpośrednio do popularnych systemów CMS (np. WordPress) 
