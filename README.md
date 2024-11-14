@@ -1,8 +1,8 @@
-# AI Article HTML Generator
+# AI Generator Artykułów HTML
 
 ## Opis projektu
 
-AI Article HTML Generator to aplikacja w Pythonie, która przetwarza tekstowy plik artykułu i generuje z niego HTML przy użyciu API OpenAI. Wygenerowany kod HTML jest strukturalnie sformatowany oraz zawiera miejsca na grafiki, które można później wypełnić. Aplikacja zapisuje wygenerowany HTML w dedykowanym pliku `artykul.html` i aktualizuje podgląd w `podglad.html`.
+AI Generator Artykułów HTML to aplikacja w Pythonie, która przetwarza tekstowy plik artykułu i generuje z niego HTML przy użyciu API OpenAI. Wygenerowany kod HTML jest strukturalnie sformatowany oraz zawiera miejsca na grafiki, które można później wypełnić. Aplikacja zapisuje wygenerowany HTML w dedykowanym pliku `artykul.html` i aktualizuje podgląd w `podglad.html`.
 
 ### Kluczowe funkcjonalności
 - Odczytywanie treści artykułu z pliku tekstowego.
@@ -15,7 +15,7 @@ AI Article HTML Generator to aplikacja w Pythonie, która przetwarza tekstowy pl
 ## Wymagania
 
 - Python 3.x
-- Konto i klucz API OpenAI
+- Klucz do API OpenAI
 - Pliki konfiguracyjne i zależności:
   - Plik `.env` z kluczem API OpenAI (`OPENAI_API_KEY`).
   - `requirements.txt` z wymaganymi pakietami.
@@ -35,11 +35,14 @@ AI Article HTML Generator to aplikacja w Pythonie, która przetwarza tekstowy pl
    ```
     OPENAI_API_KEY=your_openai_api_key
    ```
+   Plik .env.example ukazuje przykład tego pliku.
+   
    ## Uruchomienie
 
 1. Upewnij się, że plik artykułu `artykul.txt` znajduje się w katalogu `data`.
+   Plik `artykul.txt` powinien zawierać treść artykułu w formie tekstowej, który zostanie przetworzony przez aplikację na format HTML.
 
-2. Uruchom aplikację:
+3. Uruchom aplikację:
 
    ```
    python src/main.py
@@ -73,9 +76,12 @@ Po zakończeniu działania programu:
 ## Wykorzystanie OpenAI API
 
 Aplikacja korzysta z API OpenAI do przetworzenia artykułu na HTML. Prompt zawiera szczegółowe wytyczne dotyczące formatowania, struktury nagłówków, list, cytatów i grafik. Wygenerowany kod HTML spełnia następujące wymagania:
-- Struktura nagłówków i akapitów.
-- Grafiki wstawiane są za pomocą tagu `<figure>` i `<img>` z atrybutem `alt` oraz `<figcaption>`.
-- Kod HTML nie zawiera stylów CSS ani JavaScriptu.
+
+- **Struktura nagłówków i akapitów** – Aplikacja wykorzystuje odpowiednie znaczniki HTML, takie jak `<h1>`, `<h2>`, `<h3>`, `<p>`, `<ul>`, `<ol>`, `<blockquote>`, aby zapewnić poprawne formatowanie i organizację treści. Dzięki temu artykuł jest logicznie podzielony na sekcje, listy i cytaty.
+
+- **Grafiki z precyzyjnymi opisami** – W kodzie HTML automatycznie umieszczane są miejsca na grafiki, zgodnie z instrukcjami zadania. Każda grafika jest osadzona w tagu `<figure>`, z tagiem `<img>` zawierającym atrybut `src="image_placeholder.jpg"`. Dodatkowo, każdy obrazek ma atrybut `alt` z opisem (promptem) dostarczającym szczegółowe instrukcje dotyczące generowania obrazu. Pod grafiką znajduje się również podpis (`<figcaption>`), związany z kontekstem artykułu.
+
+- **Brak stylów CSS ani JavaScriptu** – Wygenerowany kod HTML składa się wyłącznie z czystego HTML. Nie zawiera żadnych stylów CSS ani JavaScriptu, zgodnie z wytycznymi zadania. Aplikacja zapewnia, że kod HTML zawiera tylko zawartość przeznaczoną do osadzenia pomiędzy tagami `<body>` i `</body>`, bez dodatkowych sekcji takich jak `<html>`, `<head>`, czy `<body>`.
 
 ## Obsługa błędów
 
@@ -99,8 +105,8 @@ Po uruchomieniu aplikacji:
 3. Podgląd z wstawioną treścią HTML zostanie zaktualizowany w `templates/podglad.html`.
 
 ## Wygląd wygenerowanego artykułu:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-10_10_23](https://github.com/user-attachments/assets/c3a1f5f0-e4cd-4ce0-82cf-08d33cbacca2)
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-10_13_12](https://github.com/user-attachments/assets/dccd977a-523d-4718-bea4-88393bb6d29e)
 
 
 ## Inny przykład:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-10_13_12](https://github.com/user-attachments/assets/a71a29bc-5e2e-47e2-8512-2bca0de03247)
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-12_50_44](https://github.com/user-attachments/assets/e895fc94-4276-49f6-9c12-b3799558b604)
