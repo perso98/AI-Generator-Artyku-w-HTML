@@ -1,4 +1,4 @@
- # AI Article HTML Generator
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-03_34_39](https://github.com/user-attachments/assets/d7c6ed7a-9951-4d58-b520-38d75a4dff36) # AI Article HTML Generator
 
 ## Opis projektu
 
@@ -100,9 +100,8 @@ Po uruchomieniu aplikacji:
 3. Podgląd z wstawioną treścią HTML zostanie zaktualizowany w `templates/podglad.html`.
 
 ## Wygląd wygenerowanego artykułu:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-01_46_30](https://github.com/user-attachments/assets/762e24a6-0f77-42aa-ac0b-b7b13dce4b02)
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-03_34_39](https://github.com/user-attachments/assets/e4cd75b0-35a5-4508-a1b9-7981cb222af9)
 
-
-Inny przykład:
+## Inny przykład:
 ![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-01_45_17](https://github.com/user-attachments/assets/c1138d4e-8057-4b83-95a8-5603f1808715)
 
