@@ -65,7 +65,8 @@ Po zakończeniu działania programu:
   - **szablon.html** – Podstawowy szablon HTML.
 - **.env** – Plik konfiguracyjny z kluczem API OpenAI.
 - **requirements.txt** – Lista wymaganych pakietów.
-  ![Uploading image.png…]()
+ ![image](https://github.com/user-attachments/assets/fcdb85a0-702b-4b02-93d3-a8547c0fbec0)
+
 
 
 ## Wykorzystanie OpenAI API
