@@ -2,11 +2,13 @@ import openai
 import os
 from dotenv import load_dotenv
 
+# Wczytanie danych z pliku .env, aby uzyskać klucz API
 load_dotenv()  
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def generate_html(article_content): 
     print("Generuje HTML proszę czekać...")
+    # Definicja promptu do API OpenAI
     messages = [
     {"role": "user", "content": (
         "Przetwórz poniższy artykuł do formatu HTML, używając odpowiednich tagów do strukturyzacji treści. "
@@ -30,8 +32,8 @@ def generate_html(article_content):
         "\n- **Umieść podpisy pod grafikami**, tworząc je na podstawie treści artykułu. Użyj tagu <figcaption> wewnątrz tagu <figure>, umieszczając go poniżej tagu <img>."
         "\n\n**Formatowanie treści:**"
         "\n- Używaj odpowiednich nagłówków (<h1>, <h2>, <h3>) do strukturyzacji artykułu."
+        "\n  Stosuj często kursywy <em> i pogrubienia <strong> do całego tekstu, staraj się w każdym zdaniu coś zastosować."
         "\n- **Nie umieszczaj grafik bezpośrednio po nagłówkach.** Zawsze wstaw co najmniej jeden akapit tekstu po nagłówku, zanim umieścisz grafikę."
-        "\n Stosuj kursywy <em> i pogrubienia <strong> dość często, do całego tekstu, możesz korzystać z innych tagów html do urozmaicenia tekstu."
         "\n- Jeśli w artykule są listy, sformatuj je za pomocą tagów <ul>/<ol> oraz <li>."
         "\n- Jeśli w tekście występują cytaty lub wyróżnione fragmenty, sformatuj je za pomocą tagu <blockquote>."
         "\n- Możesz używać dowolnych znaczników HTML, aby tekst był bardziej dynamiczny."
@@ -44,10 +46,17 @@ def generate_html(article_content):
     )}
 ]
 
-    response = openai.chat.completions.create(
-        model="gpt-4",
-        messages=messages,
-        max_tokens=4096,
-        temperature=0.5,
-    )
-    return response.choices[0].message.content.strip()
+ # Wykonanie wywołania do API OpenAI
+    try:
+        response = openai.chat.completions.create(
+            model="gpt-4",
+            messages=messages,
+            max_tokens=4096,
+            temperature=0.5,
+        )
+        # Zwrócenie wygenerowanej zawartośi HTML
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        # Ogólna obsługa błędów związanych z API
+        print(f"Wystąpił błąd podczas wywołania API OpenAI: {e}")
+        return None
