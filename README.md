@@ -107,6 +107,8 @@ Po uruchomieniu aplikacji:
 ## Wygląd wygenerowanego artykułu:
 ![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-12_50_44](https://github.com/user-attachments/assets/b8da1cdf-c86b-41b8-a2bf-8a21e64b9ccf)
 
+## Inny przykład:
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-13_13_49](https://github.com/user-attachments/assets/c60b60dd-b169-4ebb-81d1-d88ae83a6e77)
 
 ## Inny przykład:
 ![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-13_05_25](https://github.com/user-attachments/assets/40539ab2-c8d8-4eb4-9760-c5b60d5234f0)
