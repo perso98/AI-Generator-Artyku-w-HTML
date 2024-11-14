@@ -35,7 +35,7 @@ AI Generator Artykułów HTML to aplikacja w Pythonie, która przetwarza tekstow
    ```
     OPENAI_API_KEY=your_openai_api_key
    ```
-   Plik .env.example ukazuje przykład tego pliku.
+   Plik `.env.example` ukazuje przykład tego pliku.
    
    ## Uruchomienie
 
@@ -81,7 +81,7 @@ Aplikacja korzysta z API OpenAI do przetworzenia artykułu na HTML. Prompt zawie
 
 - **Grafiki z precyzyjnymi opisami** – W kodzie HTML automatycznie umieszczane są miejsca na grafiki, zgodnie z instrukcjami zadania. Każda grafika jest osadzona w tagu `<figure>`, z tagiem `<img>` zawierającym atrybut `src="image_placeholder.jpg"`. Dodatkowo, każdy obrazek ma atrybut `alt` z opisem (promptem) dostarczającym szczegółowe instrukcje dotyczące generowania obrazu. Pod grafiką znajduje się również podpis (`<figcaption>`), związany z kontekstem artykułu.
 
-- **Brak stylów CSS ani JavaScriptu** – Wygenerowany kod HTML składa się wyłącznie z czystego HTML. Nie zawiera żadnych stylów CSS ani JavaScriptu, zgodnie z wytycznymi zadania. Aplikacja zapewnia, że kod HTML zawiera tylko zawartość przeznaczoną do osadzenia pomiędzy tagami `<body>` i `</body>`, bez dodatkowych sekcji takich jak `<html>`, `<head>`, czy `<body>`.
+- **Brak stylów CSS ani JavaScriptu** – Wygenerowany kod HTML składa się wyłącznie z czystego HTML. Nie zawiera żadnych stylów CSS ani JavaScriptu. Aplikacja zapewnia, że kod HTML zawiera tylko zawartość przeznaczoną do osadzenia pomiędzy tagami `<body>` i `</body>`, bez dodatkowych sekcji takich jak `<html>`, `<head>`, czy `<body>`.
 
 ## Obsługa błędów
 
