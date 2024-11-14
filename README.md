@@ -105,14 +105,16 @@ Po uruchomieniu aplikacji:
 3. Podgląd z wstawioną treścią HTML zostanie zaktualizowany w `templates/podglad.html`.
 
 ## Wygląd wygenerowanego artykułu:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-15_33_17](https://github.com/user-attachments/assets/945225f8-7638-4724-bc8e-77d113ed53ea)
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-20_10_05](https://github.com/user-attachments/assets/2d58e59d-27d3-49df-8c46-1974ec3a7313)
 
 ## Inny przykład:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-13_13_49](https://github.com/user-attachments/assets/c60b60dd-b169-4ebb-81d1-d88ae83a6e77)
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-20_03_47](https://github.com/user-attachments/assets/5068f547-f2c0-4d0d-a2a9-15c7c126fefd)
 
 ## Inny przykład:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-13_05_25](https://github.com/user-attachments/assets/40539ab2-c8d8-4eb4-9760-c5b60d5234f0)
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-19_58_56](https://github.com/user-attachments/assets/f7cd2b06-a3b9-4322-8c49-683df9f7f872)
 
+## Inny przykład:
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-20_05_58](https://github.com/user-attachments/assets/6fa4bef8-ea6b-408a-8847-045ba28d3577)
 
 ## Możliwe kierunki dalszego rozwoju
 
