@@ -105,7 +105,7 @@ Po uruchomieniu aplikacji:
 3. Podgląd z wstawioną treścią HTML zostanie zaktualizowany w `templates/podglad.html`.
 
 ## Wygląd wygenerowanego artykułu:
-![Uploading screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-20_10_05.png…]()
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-20_10_05](https://github.com/user-attachments/assets/2d58e59d-27d3-49df-8c46-1974ec3a7313)
 
 ## Inny przykład:
 ![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-20_03_47](https://github.com/user-attachments/assets/5068f547-f2c0-4d0d-a2a9-15c7c126fefd)
