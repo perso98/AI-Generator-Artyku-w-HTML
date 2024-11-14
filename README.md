@@ -1,4 +1,4 @@
- # AI Article HTML Generator
+# AI Article HTML Generator
 
 ## Opis projektu
 
@@ -85,7 +85,6 @@ Aplikacja została wyposażona w bloki `try-except`, które wychwytują i loguj�
 - Problemy z zapisem do plików.
 
 ## Przykłady użycia
-
 Przykładowa komenda do uruchomienia aplikacji:
 
 ```
@@ -100,9 +99,8 @@ Po uruchomieniu aplikacji:
 3. Podgląd z wstawioną treścią HTML zostanie zaktualizowany w `templates/podglad.html`.
 
 ## Wygląd wygenerowanego artykułu:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-01_46_30](https://github.com/user-attachments/assets/762e24a6-0f77-42aa-ac0b-b7b13dce4b02)
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-10_10_23](https://github.com/user-attachments/assets/c3a1f5f0-e4cd-4ce0-82cf-08d33cbacca2)
 
 
-Inny przykład:
-![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-01_45_17](https://github.com/user-attachments/assets/c1138d4e-8057-4b83-95a8-5603f1808715)
-
+## Inny przykład:
+![screencapture-file-E-PythonRepos-Oxido-Zadanie-rekrutacyjne-OXIDO-templates-podglad-html-2024-11-14-10_13_12](https://github.com/user-attachments/assets/a71a29bc-5e2e-47e2-8512-2bca0de03247)
