@@ -23,9 +23,9 @@ AI Article HTML Generator to aplikacja w Pythonie, która przetwarza tekstowy pl
 ## Instalacja
 
 1. Sklonuj repozytorium:
-```
-gh repo clone perso98/Zadanie-rekrutacyjne-OXIDO
-```
+   ```
+   gh repo clone perso98/Zadanie-rekrutacyjne-OXIDO
+   ```
 2. Zainstaluj wymagane pakiety:
 
    ```
@@ -65,6 +65,7 @@ Po zakończeniu działania programu:
   - **szablon.html** – Podstawowy szablon HTML.
 - **.env** – Plik konfiguracyjny z kluczem API OpenAI.
 - **requirements.txt** – Lista wymaganych pakietów.
+  
  ![image](https://github.com/user-attachments/assets/fcdb85a0-702b-4b02-93d3-a8547c0fbec0)
 
 
