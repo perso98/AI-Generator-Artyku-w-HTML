@@ -24,7 +24,7 @@ AI Generator Artykułów HTML to aplikacja w Pythonie, która przetwarza tekstow
 
 1. Sklonuj repozytorium:
    ```
-   gh repo clone perso98/Zadanie-rekrutacyjne-OXIDO
+   gh repo clone perso98/AI-Generator-Artyku-w-HTML
    ```
 2. Zainstaluj wymagane pakiety:
 
